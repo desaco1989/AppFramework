@@ -1,4 +1,4 @@
-package cn.netwins.allmedianews.forth_navigate;
+package cn.netwins.allmedianews.activity.third_navigate;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,12 +13,12 @@ import cn.netwins.allmedianews.base.BaseFragment;
 /**
  * Created by desaco on 2017/6/22.
  */
-public class ForthNavFragment extends BaseFragment {
+public class ThirdNavFragment extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.common_fragment, null);
         TextView showTv = (TextView)v.findViewById(R.id.show_text_tv);
-        showTv.setText("ForthNavFragment,第444个Fragment");
+        showTv.setText("ThirdNavFragment,第333个Fragment");
         return v;
     }
 }

@@ -1,4 +1,4 @@
-package cn.netwins.allmedianews;
+package cn.netwins.allmedianews.activity;
 
 import android.content.Context;
 import android.support.v4.app.FragmentManager;
@@ -10,10 +10,11 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import cn.netwins.allmedianews.first_navigate.FirstNavFragment;
-import cn.netwins.allmedianews.forth_navigate.ForthNavFragment;
-import cn.netwins.allmedianews.second_navigate.SecondNavFragment;
-import cn.netwins.allmedianews.third_navigate.ThirdNavFragment;
+import cn.netwins.allmedianews.R;
+import cn.netwins.allmedianews.activity.first_navigate.FirstNavFragment;
+import cn.netwins.allmedianews.activity.forth_navigate.ForthNavFragment;
+import cn.netwins.allmedianews.activity.second_navigate.SecondNavFragment;
+import cn.netwins.allmedianews.activity.third_navigate.ThirdNavFragment;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {

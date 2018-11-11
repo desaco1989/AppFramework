@@ -1,4 +1,4 @@
-package cn.netwins.allmedianews.second_navigate;
+package cn.netwins.allmedianews.activity.second_navigate;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

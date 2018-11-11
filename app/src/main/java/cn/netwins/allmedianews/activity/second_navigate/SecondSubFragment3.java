@@ -1,4 +1,4 @@
-package cn.netwins.allmedianews.second_navigate;
+package cn.netwins.allmedianews.activity.second_navigate;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import java.util.Objects;
 import java.util.concurrent.Callable;
 
 import cn.netwins.allmedianews.R;

@@ -1,6 +1,5 @@
-package cn.netwins.allmedianews.second_navigate;
+package cn.netwins.allmedianews.activity.second_navigate;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
@@ -13,7 +12,6 @@ import android.widget.TextView;
 import cn.netwins.allmedianews.R;
 import cn.netwins.allmedianews.base.BaseFragment;
 import cn.netwins.allmedianews.thread_pool.ICallback;
-import cn.netwins.allmedianews.thread_pool.ThreadPoolManager;
 import cn.netwins.allmedianews.thread_pool.ThreadPoolManager2;
 
 /**

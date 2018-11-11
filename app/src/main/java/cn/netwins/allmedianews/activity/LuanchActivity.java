@@ -1,4 +1,4 @@
-package cn.netwins.allmedianews;
+package cn.netwins.allmedianews.activity;
 
 import android.content.Intent;
 import android.os.Handler;
@@ -7,7 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Window;
 
-import cn.netwins.allmedianews.MainActivity;
 import cn.netwins.allmedianews.R;
 
 public class LuanchActivity extends AppCompatActivity {

@@ -1,4 +1,4 @@
-package cn.netwins.allmedianews.first_navigate;
+package cn.netwins.allmedianews.activity.first_navigate;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
