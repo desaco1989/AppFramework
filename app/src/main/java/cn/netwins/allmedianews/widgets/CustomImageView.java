@@ -7,3 +7,5 @@ package cn.netwins.allmedianews.widgets;
 public class CustomImageView {
 
 }
+
+

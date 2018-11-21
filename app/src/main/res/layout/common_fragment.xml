@@ -39,5 +39,12 @@
         android:layout_marginTop="50dp"
         android:text="remove线程池中的Runnable" />
 
+    <TextView
+        android:drawableRight="@mipmap/ic_launcher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:text="errerrdgffffffffffffffffffff单身狗方便的ffffffffffffzcghrsjhnytrsjnhtrshn个升堂入室" />
 
 </LinearLayout>
