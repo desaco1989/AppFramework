@@ -8,4 +8,5 @@ import android.app.Application;
  */
 
 public class FrameworkApplication extends Application {
+
 }

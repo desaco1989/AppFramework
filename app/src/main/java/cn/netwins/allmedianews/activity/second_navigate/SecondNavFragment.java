@@ -40,9 +40,9 @@ public class SecondNavFragment extends BaseFragment {
 
     private void initData() {
         fragments = new ArrayList<Fragment>();
-        fragments.add(new SecondSubFragment1().newInstance("sub 1"));//31 点播
-        fragments.add(new SecondSubFragment2().newInstance("sub 2"));//30原创；
-        fragments.add(new SecondSubFragment3().newInstance("sub 3"));//32 VR
+        fragments.add(new SecondSubFragment1().newInstance("Second Fragment,,,sub 111"));//31 点播
+        fragments.add(new SecondSubFragment2().newInstance("Second Fragment,,,sub 222"));//30原创；
+        fragments.add(new SecondSubFragment3().newInstance("Second Fragment,,,sub 333"));//32 VR
 
         vpAdapter = new VpAdapter(getChildFragmentManager(), fragments);//getChildFragmentManager()   getFragmentManager()
 //        mFragmentVp.setTransitionEffect(AnimatViewPager.TransitionEffect.ZoomIn);//ZoomIn Accordion//TODO

@@ -19,7 +19,7 @@ import cn.netwins.allmedianews.thread_pool.ThreadPoolManager2;
  * RxJava事件驱动代替接口回调
  * https://blog.csdn.net/ShareUs/article/details/52434527
  */
-public class SecondSubFragment1 extends BaseFragment implements View.OnClickListener {
+public class SecondSubFragment1 extends BaseFragment implements View.OnClickListener,ICallback {
 
 
     private TextView callbackTv;
@@ -32,10 +32,19 @@ public class SecondSubFragment1 extends BaseFragment implements View.OnClickList
         return listFragment;
     }
 
+    @Override
+    public void sendMsg(String type, Object msg) {
+        if (msg != null) {
+            callbackTv.setText("sub1111,,," + msg);
+            Log.e("desaco", "SecondSubFragment2222,  msg=" + msg);
+        }
+    }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.common_fragment, null);
+        poolManager2 = ThreadPoolManager2.getThreadPoolInstance();
 
         initView(v);
         initData();
@@ -45,8 +54,14 @@ public class SecondSubFragment1 extends BaseFragment implements View.OnClickList
 
     private void initView(View v) {
         TextView showTv = (TextView) v.findViewById(R.id.show_text_tv);
-        showTv.setText("SecondSubFragment1111,,,,,,,,,tab2");
-//        Log.e("desaco", "SecondSubFragment1 onCreateView()");
+        Bundle bundle =this.getArguments();//得到从Activity传来的数据
+        String mess = null;
+        if(bundle!=null){
+            mess = bundle.getString("videoType");
+        }
+        showTv.setText(mess);
+        Log.e("desaco","SecondSubFragment mess="+mess);
+
         callbackTv = (TextView) v.findViewById(R.id.callback_data_tv);
         Button subThreadBt = (Button) v.findViewById(R.id.sub_thread_bt);
         subThreadBt.setVisibility(View.VISIBLE);
@@ -56,7 +71,7 @@ public class SecondSubFragment1 extends BaseFragment implements View.OnClickList
     private ThreadPoolManager2 poolManager2;
 
     private void initData() {
-        poolManager2 = ThreadPoolManager2.getThreadPoolInstance();
+
         poolManager2.setInterfaceObject(new ICallback() {
             @Override
             public void sendMsg(String type, Object msg) {
@@ -68,13 +83,6 @@ public class SecondSubFragment1 extends BaseFragment implements View.OnClickList
         });
     }
 
-//    @Override
-//    public void sendMsg(String type, Object msg) {
-//        if (msg != null) {
-//            callbackTv.setText("sub1111,,," + msg);
-//            Log.e("desaco", "SecondSubFragment1111,  msg=" + msg);
-//        }
-//    }
 
     @Override
     public void onClick(View view) {
@@ -94,7 +102,6 @@ public class SecondSubFragment1 extends BaseFragment implements View.OnClickList
             String a = "sub 1,";
             String b = "sub 11111111";
             String c = a + b;
-//            Log.e("desaco", "sub1,c=" + c);
         }
     };
 

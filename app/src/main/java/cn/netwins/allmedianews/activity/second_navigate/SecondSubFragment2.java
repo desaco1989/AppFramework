@@ -36,7 +36,7 @@ public class SecondSubFragment2 extends BaseFragment implements View.OnClickList
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.common_fragment, null);
-
+        poolManager2 = ThreadPoolManager2.getThreadPoolInstance();
 
         initView(v);
         initData();
@@ -46,8 +46,13 @@ public class SecondSubFragment2 extends BaseFragment implements View.OnClickList
 
     private void initView(View v) {
         TextView showTv = (TextView) v.findViewById(R.id.show_text_tv);
-        showTv.setText("SecondSubFragment2222,,,,,,,,,tab2");
-//        Log.e("desaco", "SecondSubFragment2 onCreateView()");
+//
+        Bundle bundle =this.getArguments();//得到从Activity传来的数据
+        String mess = null;
+        if(bundle!=null){
+            mess = bundle.getString("videoType");
+        }
+        showTv.setText(mess);
 
         callbackTv = (TextView) v.findViewById(R.id.callback_data_tv);
 
@@ -59,7 +64,7 @@ public class SecondSubFragment2 extends BaseFragment implements View.OnClickList
     private ThreadPoolManager2 poolManager2;
 
     private void initData() {
-        poolManager2 = ThreadPoolManager2.getThreadPoolInstance();
+
         poolManager2.setInterfaceObject(new ICallback() {
             @Override
             public void sendMsg(String type, Object msg) {
